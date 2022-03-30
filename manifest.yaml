@@ -1,0 +1,45 @@
+display_information:
+  name: YogiBot
+  description: A secure replacement for the legacy Incoming Webhooks integration.
+  background_color: "#cc671b"
+  long_description:
+    "YogiBot is a Slack App to replace the legacy webhooks experience for your employees, customers, clients, and friends on Slack. \r
+
+    Add Yogi to a public or private channel and copy your existing webhooks for centralized notifications. \r
+
+    Rest easy knowing Yogi adheres to the latest security best practices and provides a much safer channel than the now deprecated Custom Incoming Webhooks."
+features:
+  app_home:
+    home_tab_enabled: true
+    messages_tab_enabled: false
+    messages_tab_read_only_enabled: false
+  bot_user:
+    display_name: YogiBot
+    always_online: true
+  slash_commands:
+    - command: /missed
+      url: https://yogibot13.herokuapp.com/command/missed/
+      description: Message me a list of all missed notifs
+      should_escape: false
+oauth_config:
+  scopes:
+    bot:
+      - chat:write
+      - commands
+      - incoming-webhook
+      - mpim:read
+      - app_mentions:read
+      - chat:write.customize
+      - groups:read
+      - im:read
+      - reminders:read
+      - users:read
+      - dnd:read
+settings:
+  event_subscriptions:
+    request_url: https://yogibot13.herokuapp.com/slack/events/
+    bot_events:
+      - app_home_opened
+  org_deploy_enabled: false
+  socket_mode_enabled: false
+  token_rotation_enabled: false

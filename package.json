@@ -1,0 +1,14 @@
+{
+	"name": "yogibot13",
+	"version": "0.1.0",
+	"description": "A Slack app using ⚡️ Bolt for JavaScript and deployed on the Heroku platform.",
+	"main": "app.js",
+	"scripts": {
+		"start": "node app.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"license": "MIT",
+	"dependencies": {
+		"@slack/bolt": "^3.6.0"
+	}
+}
